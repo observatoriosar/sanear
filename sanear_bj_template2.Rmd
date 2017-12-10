@@ -23,10 +23,12 @@ opts_chunk$set(echo=TRUE,
 opts_knit$set(width=75)
 ```
 
+## **Introdução**
 
-Neste projeto encontram-se as bases de dados e códigos computacionais utilizados numa apresentação feita pelo Observatório de Saneamento e Meio Ambiente do Recife (OSAR) sobre os dados de saneamento em Belo Jardim, no evento **Digitologias**.
+Neste projeto encontram-se as bases de dados e códigos computacionais utilizados numa apresentação feita pelo Observatório de Saneamento e Meio Ambiente do Recife (OSAR) sobre os dados de saneamento em Belo Jardim, no evento **Digitologias**. Todo o trabalho foi feito em [linguagem R](https://openastrolabium.wordpress.com/2017/05/24/introducao-ao-r/). As bases de dados originais, assim como os códigos para gerareste documento se encontram em [nosso repositório](https://github.com/observatoriosar).
 
 
+##### Iniciar em R
 ```{r cars}
 
 # instalar pacotes (quando necessario)
@@ -38,7 +40,7 @@ library(readxl); library(ggmap); library(ggplot2)
 
 </br>
 
-#### Definir padrão para gráficos
+##### Definir padrão para gráficos
 ```{r }
 # tema para grafico
 theme_arretado<- function (base_size = 12, base_family = "") {
@@ -59,7 +61,7 @@ theme_arretado<- function (base_size = 12, base_family = "") {
 
 </br>
 
-#### Gráficos
+## **Gráficos**
 
 ```{r}
 # importar dados
@@ -69,7 +71,7 @@ munic_PE_1_ <-  read_excel("Dados/belo jardim total.xlsx")
 
 </br>
 
-#### Abastecimento de Água 
+### 1. Abastecimento de Água 
 
 ```{r}
 
@@ -101,7 +103,7 @@ print(belo1)
 
 </br>
 
-#### Consumo Médio de Água
+### 2. Consumo Médio de Água
 
 ```{r}
 

@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "OSAR em Belo Jardim (PE)"
 date: "`r Sys.Date()`"
 output:
   rmdformats::readthedown:
@@ -13,7 +13,7 @@ library(rmdformats)
 
 ## Global options
 options(max.print="75")
-opts_chunk$set(echo=FALSE,
+opts_chunk$set(echo=TRUE,
 	             cache=TRUE,
                prompt=FALSE,
                tidy=TRUE,

@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="date" content="2017-12-10" />
+<meta name="date" content="2017-12-18" />
 
 <title>OSAR em Belo Jardim (PE)</title>
 
@@ -108,7 +108,38 @@ $(document).ready(function () {
 <div id="main">
 <div id="introducao" class="section level2">
 <h2><strong>Introdução</strong></h2>
-<p>Neste projeto encontram-se as bases de dados e códigos computacionais utilizados numa apresentação feita pelo Observatório de Saneamento e Meio Ambiente do Recife (OSAR) sobre os dados de saneamento em Belo Jardim, no evento <strong>Digitologias</strong>. Todo o trabalho foi feito em <a href="https://openastrolabium.wordpress.com/2017/05/24/introducao-ao-r/">linguagem R</a>. As bases de dados originais, assim como os códigos para gerareste documento se encontram em <a href="https://github.com/observatoriosar">nosso repositório</a>.</p>
+<p>Neste projeto encontram-se as bases de dados e códigos computacionais utilizados numa apresentação feita pelo Observatório de Saneamento e Meio Ambiente do Recife (OSAR) sobre os dados de saneamento em Belo Jardim, município do Agreste pernambucano, no evento <strong>Digitologias</strong>. Todo o trabalho foi feito em <a href="https://openastrolabium.wordpress.com/2017/05/24/introducao-ao-r/">linguagem R</a>. As bases de dados originais, assim como os códigos para gerareste documento se encontram em <a href="https://github.com/observatoriosar">nosso repositório</a>.</p>
+<p>Os indicadores utilizados na análise foram identificados na base de dados do Sistema de Informação Sobre Saneamento (SNIS, 2015). Segue abaixo os indicadores e seus respectivos códigos:</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Indicador</strong></th>
+<th align="center"><strong>Código no SNIS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>População total atendida com abastecimento de água (Habitantes)</td>
+<td align="center">AG001</td>
+</tr>
+<tr class="even">
+<td>Consumo médio per capta de água (l/hab./dia)</td>
+<td align="center">IN022</td>
+</tr>
+<tr class="odd">
+<td>Índice de Coleta de esgoto</td>
+<td align="center">IN056</td>
+</tr>
+<tr class="even">
+<td>Índice de tratamento de esgoto (percentual)</td>
+<td align="center">IN016</td>
+</tr>
+<tr class="odd">
+<td>Volume de esgotos coletado (1.000 m³/ano)</td>
+<td align="center">ES005</td>
+</tr>
+</tbody>
+</table>
 <div id="iniciar-em-r" class="section level5">
 <h5>Iniciar em R</h5>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># instalar pacotes (quando necessario)</span>
@@ -198,7 +229,7 @@ munic_PE_1_ &lt;-<span class="st">  </span><span class="kw">read_excel</span>(<s
 </div>
 
 <div id="postamble" data-toggle="wy-nav-shift" class="status">
-<p class="date"><span class="glyphicon glyphicon-calendar"></span> 2017-12-10</p>
+<p class="date"><span class="glyphicon glyphicon-calendar"></span> 2017-12-18</p>
 </div>
 
 

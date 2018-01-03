@@ -27,22 +27,22 @@ opts_chunk$set(echo=TRUE,
 opts_knit$set(width=75)
 ```
 
-## **INTRODU«√O**
+## **INTRODU√á√ÉO**
 
-Neste projeto encontram-se as bases de dados e cÛdigos computacionais utilizados numa apresentaÁ„o feita pelo ObservatÛrio de Saneamento e Meio Ambiente do Recife (OSAR) sobre os dados de saneamento em Belo Jardim, municÌpio do Agreste pernambucano, no evento **Digitologias**. Todo o trabalho foi feito em [linguagem R](https://openastrolabium.wordpress.com/2017/05/24/introducao-ao-r/). As bases de dados originais, assim como os cÛdigos para gerareste documento se encontram em [nosso repositÛrio](https://github.com/observatoriosar).tratra
+Neste projeto encontram-se as bases de dados e c√≥digos computacionais utilizados numa apresenta√ß√£o feita pelo Observat√≥rio de Saneamento e Meio Ambiente do Recife (OSAR) sobre os dados de saneamento em Belo Jardim, munic√≠pio do Agreste pernambucano, no evento **Digitologias**. Todo o trabalho foi feito em [linguagem R](https://openastrolabium.wordpress.com/2017/05/24/introducao-ao-r/). As bases de dados originais, assim como os c√≥digos para gerareste documento se encontram em [nosso reposit√≥rio](https://github.com/observatoriosar).
 
-Os indicadores utilizados na an·lise foram identificados na base de dados do Sistema de InformaÁ„o Sobre Saneamento (SNIS, 2015). Segue abaixo os indicadores e seus respectivos cÛdigos:
+Os indicadores utilizados na an√°lise foram identificados na base de dados do Sistema de Informa√ß√£o Sobre Saneamento (SNIS, 2015). Segue abaixo os indicadores e seus respectivos c√≥digos:
 
-| **Indicador**                                                    | **CÛdigo no SNIS**           |
+| **Indicador**                                                    | **C√≥digo no SNIS**           |
 | ---------------------------------------------------------------- |:---------------------------: |
-| PopulaÁ„o total atendida com abastecimento de ·gua (Habitantes)  | AG001                        |
-| Consumo mÈdio per capta de ·gua (l/hab./dia)                     | IN022                        |
-| Õndice de Coleta de esgoto                                       | IN056                        |
-| Õndice de tratamento de esgoto (percentual)                      | IN016                        |
-| Volume de esgotos coletado (1.000 m≥/ano)                        | ES005                        |
+| Popula√ß√£o total atendida com abastecimento de √°gua (Habitantes)  | AG001                        |
+| Consumo m√©dio per capta de √°gua (l/hab./dia)                     | IN022                        |
+| √çndice de Coleta de esgoto                                       | IN056                        |
+| √çndice de tratamento de esgoto (percentual)                      | IN016                        |
+| Volume de esgotos coletado (1.000 m¬≥/ano)                        | ES005                        |
 
 
-De forma exploratÛria, discutimos com os participantes do evento cada indicador, observando sua variaÁ„o ao longo do tempo e questionando os fatores que os explicavam. Nosso objetivo foi apresentar os dados sobre a situaÁ„o sanit·ria do municÌpio e compreender o comportamento dos dados ao longo do tempo.
+De forma explorat√≥ria, discutimos com os participantes do evento cada indicador, observando sua varia√ß√£o ao longo do tempo e questionando os fatores que os explicavam. Nosso objetivo foi apresentar os dados sobre a situa√ß√£o sanit√°ria do munic√≠pio e compreender o comportamento dos dados ao longo do tempo.
 
 </br>
 
@@ -59,7 +59,7 @@ library(readxl); library(ggmap); library(ggplot2)
 
 </br>
 
-#### **Definir padr„o para gr·ficos**
+#### **Definir padr√£o para gr√°ficos**
 ```{r }
 # tema para grafico
 theme_arretado<- function (base_size = 12, base_family = "") {
@@ -80,8 +80,8 @@ theme_arretado<- function (base_size = 12, base_family = "") {
 
 </br>
 
-## **AN¡LISE**
-No perÌodo 2004-2015 houve expans„o do serviÁo de abastecimento de ·gua que passou a atender quase toda a populaÁ„o do municÌpio. Entretanto, observando o Consumo mÈdio per capta de ·gua, verificou-se uma reduÁ„o dr·stica no consumo de ·gua. Em discuss„o, tomamos conhecimento de que seca foi um fator determinante para reduÁ„o do consumo de ·gua no municÌpio.
+## **AN√ÅLISE**
+No per√≠odo 2004-2015 houve expans√£o do servi√ßo de abastecimento de √°gua que passou a atender quase toda a popula√ß√£o do munic√≠pio. Entretanto, observando o Consumo m√©dio per capta de √°gua, verificou-se uma redu√ß√£o dr√°stica no consumo de √°gua. Em discuss√£o, tomamos conhecimento de que seca foi um fator determinante para redu√ß√£o do consumo de √°gua no munic√≠pio.
 
 
 ```{r}
@@ -92,27 +92,27 @@ munic_PE_1_ <-  read_excel("Dados/belo jardim total.xlsx")
 
 </br>
 
-### **1. Abastecimento de ¡gua**
+### **1. Abastecimento de √Ågua**
 ```{r}
 
 belo1 <- ggplot(data = munic_PE_1_)+
-  geom_line(aes(x = `Ano de ReferÍncia`, 
-                y = `AG001 - PopulaÁ„o total atendida com abastecimento de ·gua (Habitantes)`,
+  geom_line(aes(x = `Ano de Refer√™ncia`, 
+                y = `AG001 - Popula√ß√£o total atendida com abastecimento de √°gua (Habitantes)`,
                 group =1), 
                 size = 1, 
                 colour = "darkblue")+
   
-  geom_text(aes( x = `Ano de ReferÍncia`, 
-                 y = `AG001 - PopulaÁ„o total atendida com abastecimento de ·gua (Habitantes)`,
+  geom_text(aes( x = `Ano de Refer√™ncia`, 
+                 y = `AG001 - Popula√ß√£o total atendida com abastecimento de √°gua (Habitantes)`,
                  angle = 20 , 
                  vjust = -0.9, 
                  hjust = 0.3, 
                  fontface = "bold"),
-                 label = munic_PE_1_$`AG001 - PopulaÁ„o total atendida com abastecimento de ·gua (Habitantes)`, 
+                 label = munic_PE_1_$`AG001 - Popula√ß√£o total atendida com abastecimento de √°gua (Habitantes)`, 
                  size = 3)+
   labs(x = "", 
        title = "Abastecimento de Agua em Belo Jardim",
-       y = "PopulaÁ„o")+
+       y = "Popula√ß√£o")+
   theme_arretado() 
 
 # visualizar grafico
@@ -123,12 +123,12 @@ print(belo1)
 
 </br>
 
-### **2. Consumo MÈdio de ¡gua**
+### **2. Consumo M√©dio de √Ågua**
 ```{r}
 
 belo2 <- ggplot(data = munic_PE_1_, 
-                aes(x = `Ano de ReferÍncia`, 
-                    y = munic_PE_1_$`IN022 - Consumo mÈdio percapita de ·gua (l/hab./dia)`,
+                aes(x = `Ano de Refer√™ncia`, 
+                    y = munic_PE_1_$`IN022 - Consumo m√©dio percapita de √°gua (l/hab./dia)`,
                     group =1))+
   geom_line(size = 1, 
             colour = "darkblue")+
@@ -136,10 +136,10 @@ belo2 <- ggplot(data = munic_PE_1_,
                  vjust = -0.9,
                  hjust = 0.3,
                  fontface = "bold"),
-                 label = munic_PE_1_$`IN022 - Consumo mÈdio percapita de ·gua (l/hab./dia)`, 
+                 label = munic_PE_1_$`IN022 - Consumo m√©dio percapita de √°gua (l/hab./dia)`, 
                  size = 3.7)+
   labs(x = "", 
-       title = "Consumo MÈdio de ¡gua (l/hab./dia)",
+       title = "Consumo M√©dio de √Ågua (l/hab./dia)",
        y = "Consumo")+
   theme_arretado() 
 belo2
@@ -151,8 +151,8 @@ belo2
 
 </br>
 
-### **3. Coment·rios Finais**
-Quanto ao serviÁo de esgotamento sanit·rio, apesar do alto Ìndice de coleta de esgoto observado (70,44% ) n„o existe o serviÁo de tratamento de efluentes no municÌpio que agrava os problemas de salubridade ambiental existentes. Apenas em 2015, o volume total de esgoto coleta e n„o tratado foi de 1148,34 m3, volume equivalente ‡ 459 piscinas olÌmpicas cheias. Como parte da economia municipal È baseada na agricultura, com destaque para lavouras de feij„o, milho, macaxeira, banana, mam„o, manga e outras; parte do efluente, se devidamente tratado, poderia potencializar tais plantaÁıes, gerando maior produtividade e renda para o municÌpio.
+### **3. Coment√°rios Finais**
+Quanto ao servi√ßo de esgotamento sanit√°rio, apesar do alto √≠ndice de coleta de esgoto observado (70,44% ) n√£o existe o servi√ßo de tratamento de efluentes no munic√≠pio que agrava os problemas de salubridade ambiental existentes. Apenas em 2015, o volume total de esgoto coleta e n√£o tratado foi de 1148,34 m3, volume equivalente √† 459 piscinas ol√≠mpicas cheias. Como parte da economia municipal √© baseada na agricultura, com destaque para lavouras de feij√£o, milho, macaxeira, banana, mam√£o, manga e outras; parte do efluente, se devidamente tratado, poderia potencializar tais planta√ß√µes, gerando maior produtividade e renda para o munic√≠pio.
 
 
 
